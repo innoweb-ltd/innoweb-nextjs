@@ -1,17 +1,3 @@
 {
-  "footer-title-info": "Information",
-  "footer-sponsor": "Sponsor Archsplace",
-  "footer-sponsor-link": "/sponsor",
-  "footer-title-company": "Company",
-  "footer-terms-conditions": "Terms & Conditions",
-  "footer-terms-conditions-link": "/terms",
-  "footer-privacy-policy": "Privacy Policy",
-  "footer-privacy-policy-link": "/privacy",
-  "footer-contact": "Contact",
-  "footer-contact-link": "/contact",
-  "footer-invest": "Invest in Archsplace",
-  "footer-invest-link": "/invest",
-  "footer-title-follow": "Follow Archsplace",
-  "language-name-us": "US",
-  "footer-lang-title": "Country & Language"
+  "footer-title": "Information"
 }
