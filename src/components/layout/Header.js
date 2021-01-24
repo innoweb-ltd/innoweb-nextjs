@@ -2,11 +2,8 @@ import { useRef, useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 
-// IMPORT COMPONENTS
-import Nav from "./Nav"
-
 // IMPORT UTILS
-import { menuSvg, xSvg, archsplaceSvg } from "@utils/svg"
+import { menuSvg, xSvg } from "@utils/svg"
 import { isEmpty } from "@utils"
 
 // IMPORT STYLES
