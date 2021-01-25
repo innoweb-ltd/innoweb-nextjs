@@ -3,7 +3,7 @@ import getT from "next-translate/getT"
 import Head from "next/head"
 
 // COMPONENTS
-
+import Contact from "@components/info/contact"
 
 const Page = ({ path, locale }) => {
   // HOOKS
@@ -16,6 +16,7 @@ const Page = ({ path, locale }) => {
         <title>{t(`${path}-page-title`)}</title>
         <meta name="description" content={t(`${path}-meta-desc`)} />
       </Head>
+      {path === "contact" && <Contact t={t} />}
     </>
   )
 }

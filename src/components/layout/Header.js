@@ -33,8 +33,16 @@ export const Header = () => {
 
   // RENDER
   return (
-    <header className={classes.header}>
-      HELLO WORLD
+    <header>
+      <div className={`${classes.container} ${classes.header}`}>
+        <Image
+          className={classes.headerLogo}
+          src={`${process.env.NEXT_PUBLIC_WEBKIT_URL}/logo-white-50x50_pQ-VJ_nt6lH.png`}
+          alt="innoweb logo"
+          width={50}
+          height={50}
+        />
+      </div>
     </header>
   )
 }

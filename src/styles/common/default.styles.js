@@ -334,11 +334,14 @@ export const defaultStyles = {
       verticalAlign: "baseline"
     },
     footer: {
+      position: "fixed",
       zIndex: "900",
       alignItems: "center",
       display: "flex",
       justifyContent: "space-between",
-      boxShadow: "0 -9px 12px 0 rgba(46, 61, 73, 0.2)",
+      boxShadow: "0 -10px 15px 0 rgba(46, 61, 73, 0.1)",
+      width: "100%",
+      height: "2rem",
       bottom: "0",
       color: "white",
       margin: 0,
@@ -349,10 +352,8 @@ export const defaultStyles = {
       verticalAlign: "baseline"
     },
     header: {
-      position: "fixed",
+      position: "sticky",
       zIndex: "1000",
-      backgroundColor: "white",
-      boxShadow: "0px 5px 25px 0 rgba(46, 61, 73, 0.2)",
       fontSize: "0.9rem",
       height: "4rem",
       width: "100%",
