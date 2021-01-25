@@ -7,7 +7,7 @@
     "commit": "sh scripts/commit.sh",
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p $PORT"
   },
   "repository": {
     "type": "git",
