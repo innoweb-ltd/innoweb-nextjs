@@ -15,25 +15,32 @@ export const Header = () => {
   const node = useRef()
   const classes = { ...useStyles(), ...useCommons() }
   const [mobileMenu, setMobileMenu] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  // LIFECYCLE
+  useEffect(() => {
+    addEventListener("scroll", handleScroll, false)
+    mobileMenu && addEventListener("mousemove", handleClickOutside, false)
+    return () => {
+      removeEventListener("scroll", handleScroll, false)
+      removeEventListener("mousemove", handleClickOutside, false)
+    }
+  })
 
   // HANDLE
   const handleMenuToggle = () => setMobileMenu(!mobileMenu)
+  const handleScroll = () => (window.scrollY > 100 ? setScrolled(true) : setScrolled(false))
   const handleClickOutside = e => {
     if (!isEmpty(node.current) && !node.current.contains(e.target)) {
       return setMobileMenu(false)
     }
     return
   }
-  useEffect(() => {
-    mobileMenu && addEventListener("mousemove", handleClickOutside, false)
-    return () => {
-      removeEventListener("mousemove", handleClickOutside, false)
-    }
-  })
 
   // RENDER
+
   return (
-    <header>
+    <header className={scrolled ? classes.headerWrapper : ""}>
       <div className={`${classes.container} ${classes.header}`}>
         <Image
           className={classes.headerLogo}

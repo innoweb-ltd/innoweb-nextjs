@@ -12,6 +12,7 @@ const Home = ({ t }) => {
     <main className={classes.home}>
       <div className={classes.container}>
         <h1>{t("home-title")}</h1>
+        <h2>{t("home-subtitle")}</h2>
       </div>
     </main>
   )

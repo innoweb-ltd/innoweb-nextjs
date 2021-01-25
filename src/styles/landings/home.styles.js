@@ -12,8 +12,15 @@ export const useStyles = createUseStyles({
     height: "50rem",
     "& h1": {
       paddingTop: "15rem",
-      fontSize: "3rem",
-      color: "white"
+      fontSize: "3.5rem",
+      color: "white",
+      width: "40rem",
+      fontWeight: "300",
+      lineHeight: "1.2"
+    },
+    "& h2": {
+      paddingTop: "1rem",
+      color: "#aaa"
     }
   }
 })
