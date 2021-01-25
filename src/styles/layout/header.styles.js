@@ -9,7 +9,6 @@ export const useStyles = createUseStyles({
     height: "4rem"
   },
   headerLogo: {
-    filter: "invert(1)",
     contain: "content"
   }
 })

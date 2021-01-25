@@ -19,7 +19,7 @@ module.exports = nextTranslate({
       {
         domain: "www.innoweb.ltd",
         defaultLocale: "us"
-      },
+      }
     ]
   },
   poweredByHeader: false,
