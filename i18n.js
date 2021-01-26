@@ -2,8 +2,8 @@ module.exports = {
   locales: ["us"],
   defaultLocale: "us",
   pages: {
-    "*": ["footer"],
+    "*": ["nav", "footer"],
     "/": ["home"],
-    "/[page]": ["contact"]
+    "/[page]": ["contact", "projects", "team"]
   }
 }

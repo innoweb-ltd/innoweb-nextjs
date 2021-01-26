@@ -3,7 +3,8 @@ import { createUseStyles } from "react-jss"
 export const useStyles = createUseStyles({
   footer: {
     width: "100%",
-    backgroundColor: "#2d2a30"
+    backgroundColor: "#484848",
+    color: "white"
   },
   footerRow: {
     width: "100%",
@@ -48,16 +49,6 @@ export const useStyles = createUseStyles({
       flexDirection: "row",
       "& a": {
         paddingRight: ".5rem"
-      }
-    }
-  },
-  footerRowColumnLang: {
-    textTransform: "uppercase",
-    padding: ".5rem 0",
-    "& a": {
-      paddingRight: ".5rem",
-      "&:hover": {
-        color: "#50406b"
       }
     }
   }

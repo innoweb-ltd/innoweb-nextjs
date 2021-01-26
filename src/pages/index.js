@@ -7,7 +7,6 @@ import Home from "@components/landing/home"
 const HomePage = () => {
   // HOOKS
   const { t } = useTranslation("home")
-  console.log(t("home-page-title"))
   // RENDER
   return (
     <>

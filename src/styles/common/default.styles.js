@@ -333,24 +333,6 @@ export const defaultStyles = {
       font: "inherit",
       verticalAlign: "baseline"
     },
-    footer: {
-      position: "fixed",
-      zIndex: "900",
-      alignItems: "center",
-      display: "flex",
-      justifyContent: "space-between",
-      boxShadow: "0 -10px 15px 0 rgba(46, 61, 73, 0.1)",
-      width: "100%",
-      height: "2rem",
-      bottom: "0",
-      color: "white",
-      margin: 0,
-      padding: 0,
-      border: 0,
-      fontSize: "100%",
-      font: "inherit",
-      verticalAlign: "baseline"
-    },
     header: {
       position: "sticky",
       zIndex: "1000",

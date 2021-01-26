@@ -12,12 +12,12 @@
   "home-service-3": "Squarespace Speed Optimization",
   "home-service-4": "NextJS Wordpress",
   "home-service-5": "PWA Solutions",
-  "home-team-1-name": "Kasper M. Sonne",
-  "home-team-1-title": "Developer and marketer",
-  "home-team-1-phone": "+351 913 343 665",
-  "home-team-1-email": "sonne@archsplace.com",
-  "home-team-2-name": "Erwan A. R. Riou",
-  "home-team-2-title": "Senior developer",
-  "home-team-2-phone": "+34 631 145 389",
-  "home-team-2-email": "riou@archsplace.com"
+  "home-kasper-1": "Kasper M. Sonne",
+  "home-kasper-2": "Developer and marketer",
+  "home-kasper-3": "+351 913 343 665",
+  "home-kasper-4": "sonne@archsplace.com",
+  "home-erwan-1": "Erwan A. R. Riou",
+  "home-erwan-2": "Senior developer",
+  "home-erwan-3": "+34 631 145 389",
+  "home-erwan-4": "riou@archsplace.com"
 }

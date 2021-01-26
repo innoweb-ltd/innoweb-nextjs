@@ -4,6 +4,7 @@ import Head from "next/head"
 
 // COMPONENTS
 import Contact from "@components/info/contact"
+import Projects from "@components/projects"
 
 const Page = ({ path, locale }) => {
   // HOOKS
@@ -16,7 +17,8 @@ const Page = ({ path, locale }) => {
         <title>{t(`${path}-page-title`)}</title>
         <meta name="description" content={t(`${path}-meta-desc`)} />
       </Head>
-      {path === "contact" && <Contact t={t} />}
+      {path === "projects" && <Projects t={t} locale={locale} />}
+      {path === "contact" && <Contact t={t} locale={locale} />}
     </>
   )
 }

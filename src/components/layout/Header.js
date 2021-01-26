@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import useTranslation from "next-translate/useTranslation"
 
 // IMPORT UTILS
 import { menuSvg, xSvg } from "@utils/svg"
@@ -16,6 +17,7 @@ export const Header = () => {
   const classes = { ...useStyles(), ...useCommons() }
   const [mobileMenu, setMobileMenu] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const { t } = useTranslation("nav")
 
   // LIFECYCLE
   useEffect(() => {
@@ -37,8 +39,23 @@ export const Header = () => {
     return
   }
 
-  // RENDER
+  // DATA
+  const data = [
+    [t("nav-home-name"), t("nav-home-link")],
+    [t("nav-projects-name"), t("nav-projects-link")],
+    [t("nav-team-name"), t("nav-team-link")],
+    [t("nav-contact-name"), t("nav-contact-link")]
+  ]
 
+  // RENDER FUNCTIONS
+  const renderNav = () =>
+    data.map((obj, i) => (
+      <Link href={obj[1]} key={i}>
+        <a>{obj[0]}</a>
+      </Link>
+    ))
+
+  // MAIN RENDER
   return (
     <header className={scrolled ? classes.headerWrapper : ""}>
       <div className={`${classes.container} ${classes.header}`}>
@@ -49,6 +66,7 @@ export const Header = () => {
           width={50}
           height={50}
         />
+        <div>{renderNav()}</div>
       </div>
     </header>
   )
