@@ -1,3 +1,12 @@
 {
-  "footer-title": "Information"
+  "footer-company-name": "InnoWeb Ltd.",
+  "footer-address-title": "Address",
+  "footer-address-1": "Petkov Street 12",
+  "footer-address-2": "4000 Plovdiv, Bulgaria",
+  "footer-contact-title": "Contact",
+  "footer-contact-email": "info@archsplace.com",
+  "footer-contact-phone": "+351 913 343 665",
+  "footer-information-title": "Information",
+  "footer-information-cookie": "Cookies",
+  "footer-information-data": "Personal data"
 }

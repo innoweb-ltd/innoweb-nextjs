@@ -2,5 +2,22 @@
   "home-page-title": "Home | Innoweb",
   "home-meta-desc": "Web Development agency specilized in Performance seo and high quality code with the lastest technologies such as react, nextjs and nodejs.",
   "home-title": "Web Development made for Performance",
-  "home-subtitle": "Websites and progressive web app solutions"
+  "home-subtitle": "Websites and progressive web app solutions",
+  "home-text-1": "Performance is key; numerous studies show that users drop off quickly, from any website or platform, if they encounter a slow experience. Because of this, Google uses a number of speed metrics among their top prioritized ranking factors.",
+  "home-text-2": "Those two facts combined, means your platform will have less users and business activity if your web solution is not build with performance, as one of the primary concerns.",
+  "home-text-3": "Speed is addictive maybe not for all programmers and web developers, but it is for us. We see it as the ultimate challenge between us and our clients competitors. Those who builds the most advanced and best performing solutions, win.",
+  "home-text-4": "Being highly competitive with what we do, gives us joy and work satisfaction. We love to see our clients climb in rankings and grow in conversions. Together we are a team, and we go further than anyone, to win the race. ",
+  "home-service-1": "React Development",
+  "home-service-2": "Full MERN Stack Solutions",
+  "home-service-3": "Squarespace Speed Optimization",
+  "home-service-4": "NextJS Wordpress",
+  "home-service-5": "PWA Solutions",
+  "home-team-1-name": "Kasper M. Sonne",
+  "home-team-1-title": "Developer and marketer",
+  "home-team-1-phone": "+351 913 343 665",
+  "home-team-1-email": "sonne@archsplace.com",
+  "home-team-2-name": "Erwan A. R. Riou",
+  "home-team-2-title": "Senior developer",
+  "home-team-2-phone": "+34 631 145 389",
+  "home-team-2-email": "riou@archsplace.com"
 }

@@ -1,14 +1,14 @@
 {
   "contact-page-title": "Contact us | Innoweb",
-  "contact-meta-desc": "Feel free to contact us regarding any kind of enquiry.",
+  "contact-meta-desc": "Feel free to contact us if you would like to know more about our projects and services.",
   "contact-hero-title": "Contact us",
   "contact-title-1": "Let us hear from you",
-  "contact-text-1": "Feel free to contact us regarding any kind of enquiry.",
+  "contact-text-1": "Feel free to contact us if you would like to know more about our projects and services.",
   "contact-form-email": "Your email (required)",
   "contact-form-subject": "Subject",
   "contact-form-message": "Your message",
-  "contact-form-option-1": "I would like to know more about the sponsor products",
-  "contact-form-option-2": "I need assistance completing the partner profile",
+  "contact-form-option-1": "I would like to know more about React projects",
+  "contact-form-option-2": "I would like to know more about Nextjs projects",
   "contact-form-option-3": "Other",
   "contact-form-button": "Send"
 }
