@@ -10,7 +10,7 @@ export const imageRender = (image, size) => {
 }
 
 // TRACKING FUNCTIONS
-export const GA_TRACKING_ID = "GTM-12424"
+export const GA_TRACKING_ID = "GTM-KC6PD84"
 export const pageview = url => window.gtag("config", GA_TRACKING_ID, { pagePath: url, pageTitle: document.title })
 export const event = ({ action, category, label, value }) =>
   window.gtag("event", action, { eventCategory: category, eventLabel: label, value: value })
