@@ -19,11 +19,12 @@ class JssDocument extends Document {
 
     ctx.renderPage = () =>
       originalRenderPage({
-        enhanceApp: App => props => (
-          <JssProvider jss={jss} registry={registry} generateId={generateId}>
-            <App {...props} hostname={ctx.req.headers.host} />
-          </JssProvider>
-        )
+        enhanceApp: App => props =>
+          (
+            <JssProvider jss={jss} registry={registry} generateId={generateId}>
+              <App {...props} hostname={ctx.req.headers.host} />
+            </JssProvider>
+          )
       })
 
     const initialProps = await Document.getInitialProps(ctx)
@@ -45,10 +46,8 @@ class JssDocument extends Document {
       <Html translate="no">
         <Head>
           <link rel="icon" href="/favicon.ico" />
-          <meta
-            name="robots"
-            content={process.env.NEXT_PUBLIC_HOSTNAME.split(".").includes("herokuapp") ? "noindex, nofollow" : "index, follow"}
-          />
+          <meta name="robots" content={process.env.NEXT_PUBLIC_HOSTNAME.split(".").includes("herokuapp") ? "noindex, nofollow" : "index, follow"} />
+          <meta name="google-site-verification" content="5yEPj5mmZTCccU13Y_Fn_kKRh6DwEOy4EkKnpZhUE5E" />
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
           <script
             dangerouslySetInnerHTML={{
