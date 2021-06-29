@@ -7,10 +7,8 @@ export const useStyles = createUseStyles({
     color: "white"
   },
   footerRow: {
-    width: "100%",
     maxWidth: "1500px",
     margin: "0 auto",
-    padding: "1rem",
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",

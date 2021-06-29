@@ -1,8 +1,10 @@
 {
   "nav-home-name": "Home",
   "nav-home-link": "/",
-  "nav-projects-name": "Projects",
-  "nav-projects-link": "projects",
+  "nav-cases-name": "Client projects",
+  "nav-cases-link": "/cases",
+  "nav-projects-name": "Our Projects",
+  "nav-projects-link": "/projects",
   "nav-team-name": "Our team",
   "nav-team-link": "/team",
   "nav-contact-name": "Contact",

@@ -111,6 +111,7 @@ export const defaultStyles = {
       border: 0,
       fontSize: "100%",
       font: "inherit",
+      lineHeight: "1.8",
       verticalAlign: "baseline"
     },
     blockquote: {
@@ -332,25 +333,6 @@ export const defaultStyles = {
       fontSize: "100%",
       font: "inherit",
       verticalAlign: "baseline"
-    },
-    header: {
-      position: "sticky",
-      zIndex: "1000",
-      fontSize: "0.9rem",
-      top: "0",
-      height: "4rem",
-      width: "100%",
-      display: "block",
-      margin: "4rem 0 0 0",
-      padding: 0,
-      border: 0,
-      font: "inherit",
-      verticalAlign: "baseline",
-      "@media (max-width: 450px)": {
-        height: "3rem",
-        bottom: "0",
-        boxShadow: "0 -9px 12px 0 rgba(46, 61, 73, 0.2)"
-      }
     },
     hgroup: {
       display: "block",
