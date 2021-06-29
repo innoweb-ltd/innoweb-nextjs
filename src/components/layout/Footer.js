@@ -52,7 +52,7 @@ export const Footer = () => {
   // MAIN RENDER
   return (
     <footer className={classes.footer}>
-      <div className={classes.footerRow}>
+      <div className={`${classes.footerRow} ${classes.container}`}>
         <section className={classes.footerRowColumn}>{t("footer-company-name")}</section>
         {renderData()}
       </div>

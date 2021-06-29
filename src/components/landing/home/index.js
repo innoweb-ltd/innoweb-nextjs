@@ -29,23 +29,26 @@ const Home = ({ t }) => {
         </div>
       </div>
       <div className={classes.mainIntro}>
-        <div className={classes.subContainer}>
-          <p>{t("home-text-1")}</p>
+        <div className={`${classes.mainIntroRow} ${classes.container}`}>
+          <h2>{t("home-text-1")}</h2>
           <p>{t("home-text-2")}</p>
         </div>
       </div>
       <div className={classes.mainServices}>
         <div className={`${classes.mainServicesRow} ${classes.container}`}>
           {renderData("service").map((x, i) => (
-            <p key={i}>{t(`home-service-${x}`)}</p>
+            <div className={classes.mainServicesColumn}>
+              <p key={i}>{t(`home-service-${x}`)}</p>
+            </div>
           ))}
         </div>
       </div>
       <div className={classes.mainSpeed}>
         <div className={`${classes.mainSpeedRow} ${classes.container}`}>
           <div className={classes.mainSpeedRowColumn}>
-            <p>{t("home-text-3")}</p>
+            <h2>{t("home-text-3")}</h2>
             <p>{t("home-text-4")}</p>
+            <p>{t("home-text-5")}</p>
           </div>
         </div>
       </div>

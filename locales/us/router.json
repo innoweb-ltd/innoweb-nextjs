@@ -1,5 +1,8 @@
 {
+  "cases": "cases",
   "projects": "projects",
   "team": "team",
-  "contact": "contact"
+  "contact": "contact",
+  "data": "data",
+  "cookie": "cookie"
 }
