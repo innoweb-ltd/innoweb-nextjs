@@ -7,6 +7,7 @@ import Contact from "@components/contact/Contact"
 import Cases from "@components/cases/Cases"
 import Projects from "@components/projects/Projects"
 import Team from "@components/team/Team"
+import Legal from "@components/legal/Legal"
 
 const Page = ({ path, locale }) => {
   // HOOKS
@@ -23,6 +24,7 @@ const Page = ({ path, locale }) => {
       {path === "projects" && <Projects t={t} locale={locale} />}
       {path === "contact" && <Contact t={t} locale={locale} />}
       {path === "team" && <Team t={t} locale={locale} />}
+      {(path === "data" || path === "cookie") && <Legal t={t} locale={locale} path={path} />}
     </>
   )
 }
