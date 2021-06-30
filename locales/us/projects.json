@@ -1,4 +1,9 @@
 {
-  "projects-hero-title": "Projects",
-  "projects-hero-subtitle": "All projects can be visually and technically designed to fit any needs and wishes."
+  "projects-page-title": "Our projects | Innoweb",
+  "projects-meta-desc": "Read about some of the projects owned by InnoWeb Ltd.",
+  "projects-hero-title": "Our projects",
+  "projects-hero-subtitle": "Projects owned by InnoWeb Ltd.",
+  "projects-project-1-title": "Microservices project",
+  "projects-project-1-text-1": "Archsplace is an intermediation platform for design professionals, and advertising solution for companies in the construction industry.",
+  "projects-project-1-text-2": "It is a complete PWA (progressive web app) solution, with multi domain and multi language. Hosting thousands of design professionals and hundreds of projects monthly."
 }

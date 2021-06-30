@@ -23,7 +23,7 @@ export const useStyles = createUseStyles({
   },
   footerRowColumn: {
     minWidth: "15rem",
-    margin: "1rem 0",
+    margin: "3rem 0",
     "& p": {
       padding: ".5rem 0"
     },

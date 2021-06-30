@@ -1,6 +1,9 @@
 import { useState } from "react"
 import Link from "next/link"
 
+// IMPORT COMPONENTS
+import { menuSvg, xSvg } from "../../utils/svg"
+
 const HeaderMenu = ({ classes, t, data }) => {
   // HOOKS
   const [toggle, setToggle] = useState(false)
@@ -25,9 +28,9 @@ const HeaderMenu = ({ classes, t, data }) => {
 
   // MAIN RENDER
   return (
-    <div className={classes.headerLower}>
+    <div>
       <div className={classes.headerLowerBtn} onClick={handleToggle}>
-        <div>Menu</div>
+        {menuSvg()}
       </div>
       <div className={!toggle ? `${classes.headerLowerNav}` : `${classes.headerLowerNav} ${classes.headerLowerNavShow}`}>
         <div className={classes.headerLowerNavMenus}>
@@ -35,7 +38,7 @@ const HeaderMenu = ({ classes, t, data }) => {
         </div>
         {toggle && (
           <div className={classes.headerLowerNavClose} onClick={handleToggle}>
-            <span>Close</span>
+            <div>{xSvg()}</div>
           </div>
         )}
       </div>

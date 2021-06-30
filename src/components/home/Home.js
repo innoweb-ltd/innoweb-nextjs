@@ -1,6 +1,6 @@
 // IMPORT STYLES
 import { useCommons } from "@styles/common/common.styles.js"
-import { useStyles } from "@styles/landings/home.styles.js"
+import { useStyles } from "@styles/home/home.styles.js"
 
 const Home = ({ t }) => {
   // HOOKS
@@ -31,7 +31,8 @@ const Home = ({ t }) => {
       <div className={classes.mainIntro}>
         <div className={`${classes.mainIntroRow} ${classes.container}`}>
           <h2>{t("home-text-1")}</h2>
-          <p>{t("home-text-2")}</p>
+          <p>{t("home-text-2-1")}</p>
+          <p>{t("home-text-2-2")}</p>
         </div>
       </div>
       <div className={classes.mainServices}>

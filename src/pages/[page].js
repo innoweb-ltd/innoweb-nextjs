@@ -3,8 +3,10 @@ import getT from "next-translate/getT"
 import Head from "next/head"
 
 // COMPONENTS
-import Contact from "@components/info/contact"
-import Projects from "@components/projects"
+import Contact from "@components/contact/Contact"
+import Cases from "@components/cases/Cases"
+import Projects from "@components/projects/Projects"
+import Team from "@components/team/Team"
 
 const Page = ({ path, locale }) => {
   // HOOKS
@@ -17,8 +19,10 @@ const Page = ({ path, locale }) => {
         <title>{t(`${path}-page-title`)}</title>
         <meta name="description" content={t(`${path}-meta-desc`)} />
       </Head>
+      {path === "cases" && <Cases t={t} locale={locale} />}
       {path === "projects" && <Projects t={t} locale={locale} />}
       {path === "contact" && <Contact t={t} locale={locale} />}
+      {path === "team" && <Team t={t} locale={locale} />}
     </>
   )
 }
