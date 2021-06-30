@@ -9,7 +9,6 @@ export const defaultStyles = {
       verticalAlign: "baseline"
     },
     body: {
-      fontFamily: '"Roboto", sans-serif',
       fontSize: "12px",
       fontWeight: "300",
       margin: 0,
