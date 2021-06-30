@@ -51,7 +51,7 @@ export const menuSvg = () => (
 )
 
 export const xSvg = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
     <path d="M0 0h24v24H0z" fill="none" />
     <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
   </svg>
@@ -75,5 +75,13 @@ export const nextSvg = () => (
   <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
     <path d="M0 0h24v24H0z" fill="none" />
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+  </svg>
+)
+
+export const logoSvg = () => (
+  <svg viewBox="0 0 24 24" width="48" height="48" viewBox="70 95 24 36" fill="white" alt="innoweb logo">
+    <path d="M 68.876124,101.21519 V 96.381132 L 80.45387,113.61768 h -3.221259 z" />
+    <path d="m 65.896805,113.60429 h 2.868101 v 15.01623 h -2.856463 v -15.01623 z" />
+    <path d="m 87.170182,96.497352 h 2.852594 V 113.45552 H 87.181757 V 96.497352 Z" />
   </svg>
 )

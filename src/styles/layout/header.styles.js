@@ -3,6 +3,7 @@ import { createUseStyles } from "react-jss"
 export const useStyles = createUseStyles({
   header: {
     position: "fixed",
+    zIndex: "9",
     top: 0,
     left: 0,
     right: 0,
@@ -17,24 +18,13 @@ export const useStyles = createUseStyles({
     alignItems: "center"
   },
   headerLogo: {
-    contain: "content"
-  },
-  headerLower: {
-    "@media (max-width: 450px)": {
-      color: "white",
-      border: "none",
-      bottom: "0",
-      zIndex: 9
-    }
+    padding: "1rem 0"
   },
   headerLowerBtn: {
     fill: "white",
     color: "white",
     display: "flex",
     flexDirection: "row-reverse",
-    "&>div": {
-      padding: ".5rem .7rem"
-    },
     "@media (min-width: 1000px)": {
       display: "none"
     }
@@ -45,7 +35,7 @@ export const useStyles = createUseStyles({
     padding: "0 1.5rem",
     alignItems: "center",
     marginLeft: "2.6rem",
-    "@media (max-width: 450px)": {
+    "@media (max-width: 1000px)": {
       display: "none",
       padding: "0 .5rem",
       "&>div:first-child": {
@@ -73,15 +63,15 @@ export const useStyles = createUseStyles({
     alignItems: "center",
     display: "flex",
     flexDirection: "row-reverse",
-    "& span": {
+    "&>div": {
       padding: ".5rem .7rem"
     },
-    "@media (min-width: 450px)": {
+    "@media (min-width: 1000px)": {
       display: "none"
     }
   },
   headerLowerNavMenus: {
-    "@media (max-width: 450px)": {
+    "@media (max-width: 1000px)": {
       paddingTop: "1rem"
     }
   },
@@ -89,7 +79,7 @@ export const useStyles = createUseStyles({
     display: "flex",
     flexWrap: "wrap",
     "&>a": {
-      "@media (max-width: 450px)": {
+      "@media (max-width: 1000px)": {
         width: "100%",
         textAlign: "right"
       }
@@ -99,13 +89,10 @@ export const useStyles = createUseStyles({
       padding: ".3rem 1rem",
       "@media (min-width: 1000px)": {
         display: "none"
-      },
-      "@media (max-width: 550px)": {
-        display: "none"
       }
     },
     "& h4": {
-      "@media (max-width: 450px)": {
+      "@media (max-width: 1000px)": {
         color: "#9d91b0",
         width: "100%",
         textAlign: "right",
@@ -113,13 +100,9 @@ export const useStyles = createUseStyles({
       }
     },
     "& p": {
-      height: "1rem",
       padding: ".5rem 1rem",
-      "@media (max-width: 450px)": {
+      "@media (max-width: 1000px)": {
         color: "white"
-      },
-      "@media (min-device-width: 450px) and (max-device-width: 1000px)": {
-        display: "none"
       },
       "&:hover": {
         color: "white",

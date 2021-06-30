@@ -19,21 +19,25 @@ export const useStyles = createUseStyles({
     },
     "& h2": {
       padding: "1rem 0 5rem",
-      color: "#aaa"
+      color: "#aaa",
+      lineHeight: "1.5"
     }
   },
   mainIntro: {
     backgroundColor: "#484848",
-    padding: "2.5rem 0",
+    padding: "3rem 0",
     color: "white",
     textAlign: "center",
     "& h2": {
-      paddingBottom: "1rem"
+      paddingBottom: "2rem"
     }
   },
   mainIntroRow: {
     maxWidth: "600px",
-    margin: "0 auto"
+    margin: "0 auto",
+    "& p": {
+      paddingBottom: "1rem"
+    }
   },
   mainServices: {
     backgroundColor: "#efede7",
