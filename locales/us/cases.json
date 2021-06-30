@@ -3,6 +3,13 @@
   "cases-meta-desc": "Read about some of our clients projects here.",
   "cases-hero-title": "Client projects",
   "cases-hero-subtitle": "All projects can be visually and technically designed to fit any needs and wishes.",
-  "cases-project-1-title": "Nextjs to Wordpress project",
-  "cases-project-1-text-1": "Server side rendered react front for Wordpress with Woocommerce."
+  "cases-frontend": "Frontend: ",
+  "cases-backend": "Backend: ",
+  "cases-description": "Description: ",
+  "cases-project-1-name": "Guldsmed Anders Mørck",
+  "cases-project-1-domain": "www.acmdesign.dk",
+  "cases-project-1-link": "https://www.acmdesign.dk",
+  "cases-project-1-frontend": "Nextjs",
+  "cases-project-1-backend": "Wordpress",
+  "cases-project-1-text-1": "Ultra fast server side rendered frontend for Wordpress with Woocommerce."
 }

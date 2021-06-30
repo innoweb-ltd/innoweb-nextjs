@@ -38,8 +38,8 @@ const Home = ({ t }) => {
       <div className={classes.mainServices}>
         <div className={`${classes.mainServicesRow} ${classes.container}`}>
           {renderData("service").map((x, i) => (
-            <div className={classes.mainServicesColumn}>
-              <p key={i}>{t(`home-service-${x}`)}</p>
+            <div className={classes.mainServicesColumn} key={i}>
+              <p>{t(`home-service-${x}`)}</p>
             </div>
           ))}
         </div>

@@ -3,7 +3,13 @@
   "projects-meta-desc": "Read about some of the projects owned by InnoWeb Ltd.",
   "projects-hero-title": "Our projects",
   "projects-hero-subtitle": "Projects owned by InnoWeb Ltd.",
-  "projects-project-1-title": "Microservices project",
-  "projects-project-1-text-1": "Archsplace is an intermediation platform for design professionals, and advertising solution for companies in the construction industry.",
-  "projects-project-1-text-2": "It is a complete PWA (progressive web app) solution, with multi domain and multi language. Hosting thousands of design professionals and hundreds of projects monthly."
+  "projects-frontend": "Frontend: ",
+  "projects-backend": "Backend: ",
+  "projects-description": "Description: ",
+  "projects-project-1-name": "Archsplace",
+  "projects-project-1-domain": "www.archsplace.com.br",
+  "projects-project-1-link": "https://www.archsplace.com.br",
+  "projects-project-1-frontend": "React",
+  "projects-project-1-backend": "Nodejs",
+  "projects-project-1-text-1": "Archsplace is an intermediation platform for design professionals, and advertising solution for companies in the construction industry. It is a progressive web-app, with multi domain and multi language. Hosting thousands of design professionals and hundreds of projects monthly."
 }
