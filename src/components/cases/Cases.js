@@ -57,11 +57,11 @@ const Cases = ({ t }) => {
                 </p>
                 <p>
                   {t("cases-frontend")}
-                  {t(front)}
+                  {front}
                 </p>
                 <p>
                   {t("cases-backend")}
-                  {t(back)}
+                  {back}
                 </p>
                 <p>
                   {t("cases-description")}
