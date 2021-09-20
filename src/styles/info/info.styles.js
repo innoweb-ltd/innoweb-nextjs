@@ -24,7 +24,8 @@ export const useStyles = createUseStyles({
   mainContentRow: {
     display: "flex",
     flexWrap: "wrap",
-    justifyContent: "space-around"
+    justifyContent: "space-around",
+    marginBottom: "2rem"
   },
   mainContentColumn: {
     maxWidth: "400px",

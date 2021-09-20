@@ -6,10 +6,6 @@
   "cases-frontend": "Frontend: ",
   "cases-backend": "Backend: ",
   "cases-description": "Description: ",
-  "cases-project-1-name": "Guldsmed Anders Mørck",
-  "cases-project-1-domain": "www.acmdesign.dk",
-  "cases-project-1-link": "https://www.acmdesign.dk",
-  "cases-project-1-frontend": "Nextjs",
-  "cases-project-1-backend": "Wordpress",
-  "cases-project-1-text-1": "Ultra fast server side rendered frontend for Wordpress with Woocommerce."
+  "case-text-acmdesign": "Ultra fast server side rendered frontend for Wordpress with Woocommerce. Google PageSpeed Insights: Mobile score ~99, Origin Summary ~0.9sec. Desktop score ~98, Origin Summary ~0.5sec.",
+  "case-text-zederkop": "Ultra fast server side rendered frontend for Wordpress with Contact Form 7. Google PageSpeed Insights: Mobile score ~98, Lab Data ~1.1sec. Desktop score ~100, Lab Data ~0.4sec."
 }

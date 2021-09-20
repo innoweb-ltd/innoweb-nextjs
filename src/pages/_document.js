@@ -5,11 +5,9 @@ import { GA_TRACKING_ID } from "@utils"
 
 // IMPORT STYLING
 import { jss, SheetsRegistry, JssProvider, createGenerateId } from "react-jss"
-import { fonts } from "@styles/common/fonts.styles.js"
 import { defaultStyles } from "@styles/common/default.styles.js"
 
 const defaultJss = jss.createStyleSheet(defaultStyles)
-const fontsJss = jss.createStyleSheet(fonts)
 
 class JssDocument extends Document {
   static async getInitialProps(ctx) {
@@ -35,7 +33,6 @@ class JssDocument extends Document {
         <>
           {initialProps.styles}
           <style id="reset-css">{defaultJss.toString()}</style>
-          <style id="font-css">{fontsJss.toString()}</style>
           <style id="server-side-styles">{registry.toString()}</style>
         </>
       )
@@ -46,6 +43,7 @@ class JssDocument extends Document {
       <Html translate="no">
         <Head>
           <link rel="icon" href="/favicon.png" />
+          <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet" />
           <meta name="robots" content={process.env.NEXT_PUBLIC_HOSTNAME.split(".").includes("herokuapp") ? "noindex, nofollow" : "index, follow"} />
           <meta name="google-site-verification" content="5yEPj5mmZTCccU13Y_Fn_kKRh6DwEOy4EkKnpZhUE5E" />
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
@@ -63,7 +61,7 @@ class JssDocument extends Document {
             }}
           />
         </Head>
-        <body style={{ fontFamily: '"Roboto", sans-serif' }}>
+        <body>
           <Main />
           <NextScript />
         </body>
