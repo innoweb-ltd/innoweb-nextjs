@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "## Table of Contents",
   "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "commit": "sh scripts/commit.sh",
     "dev": "next",
