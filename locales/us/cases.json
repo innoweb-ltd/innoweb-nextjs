@@ -7,5 +7,6 @@
   "cases-backend": "Backend: ",
   "cases-description": "Description: ",
   "case-text-acmdesign": "Ultra fast server side rendered frontend for Wordpress with Woocommerce. Google PageSpeed Insights: Mobile score ~99, Origin Summary ~0.9sec. Desktop score ~98, Origin Summary ~0.5sec.",
-  "case-text-zederkop": "Ultra fast server side rendered frontend for Wordpress with Contact Form 7. Google PageSpeed Insights: Mobile score ~98, Lab Data ~1.1sec. Desktop score ~100, Lab Data ~0.4sec."
+  "case-text-zederkop": "Ultra fast server side rendered frontend for Wordpress with Contact Form 7. Google PageSpeed Insights: Mobile score ~98, Lab Data ~1.1sec. Desktop score ~100, Lab Data ~0.4sec.",
+  "case-text-elstyrken": "Ultra fast custom theme for Squarespace built for performance. Google PageSpeed Insights: Mobile score ~99, Lab Data ~0.9sec. Desktop score ~100, Lab Data ~0.3sec."
 }
