@@ -29,6 +29,16 @@ const Cases = ({ t }) => {
       front: "Nextjs",
       back: "Wordpress",
       text: "case-text-zederkop"
+    },
+    {
+      link: "https://www.elstyrken.dk/",
+      img: "/images/elstyrken.png",
+      alt: "elstyrken website",
+      name: "Elstyrken A/S",
+      domain: "www.elstyrken.dk",
+      front: "Squarespace",
+      back: "Squarespace",
+      text: "case-text-elstyrken"
     }
   ]
 
