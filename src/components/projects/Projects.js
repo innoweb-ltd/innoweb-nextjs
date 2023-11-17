@@ -18,7 +18,7 @@ const Projects = ({ t }) => {
         <div className={classes.mainContentRow}>
           <div className={`${classes.mainContentColumn} ${classes.boxShadow}`}>
             <a target="_blank" href={t("projects-project-1-link")} className={classes.mainContentColumnImage}>
-              <Image src="/images/archsplace.png" width="400px" height="234px" alt="archsplace website" />
+              <Image src="/images/archsplace.png" width={400} height={234} alt="archsplace website" />
             </a>
           </div>
           <div className={classes.mainContentColumn}>

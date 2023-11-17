@@ -27,8 +27,8 @@ const Header = () => {
   return (
     <header className={classes.header}>
       <div className={`${classes.headerRow} ${classes.container}`}>
-        <Link href="/">
-          <a className={classes.headerLogo}>{logoSvg()}</a>
+        <Link href="/" className={classes.headerLogo}>
+          {logoSvg()}
         </Link>
         <HeaderMenu classes={classes} data={data} t={t} />
       </div>

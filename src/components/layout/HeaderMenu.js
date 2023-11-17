@@ -19,10 +19,8 @@ const HeaderMenu = ({ classes, t, data }) => {
   // RENDER FUNCTIONS
   const renderFirstNav = () =>
     data.map((obj, i) => (
-      <Link href={t(obj[1])} key={i}>
-        <a onClick={closeToggle}>
-          <p>{t(obj[0])}</p>
-        </a>
+      <Link href={t(obj[1])} key={i} onClick={closeToggle}>
+        <p>{t(obj[0])}</p>
       </Link>
     ))
 

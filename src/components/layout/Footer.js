@@ -41,7 +41,7 @@ export const Footer = () => {
           {links
             ? data.map(({ link, name }, i) => (
                 <Link key={i} href={link}>
-                  <a>{name}</a>
+                  {name}
                 </Link>
               ))
             : data.map((y, i) => <p key={i}>{y}</p>)}

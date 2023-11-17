@@ -1,5 +1,4 @@
 import { useEffect } from "react"
-import { wrapper } from "../store"
 import { useRouter } from "next/router"
 
 // IMPORT TRACKING
@@ -36,4 +35,4 @@ const AppComponent = ({ Component, pageProps }) => {
   )
 }
 
-export default wrapper.withRedux(AppComponent)
+export default AppComponent

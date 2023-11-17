@@ -55,7 +55,7 @@ const Cases = ({ t }) => {
             <div className={classes.mainContentRow} key={i}>
               <div className={`${classes.mainContentColumn} ${classes.boxShadow}`}>
                 <a target="_blank" href={t(link)} className={classes.mainContentColumnImage}>
-                  <Image src={img} width="400px" height="226px" alt={alt} />
+                  <Image src={img} width={400} height={226} alt={alt} />
                 </a>
               </div>
               <div className={classes.mainContentColumn}>
