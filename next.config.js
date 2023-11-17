@@ -3,13 +3,24 @@ const nextTranslate = require("next-translate")
 
 module.exports = nextTranslate({
   images: {
-    domains: ["ik.imagekit.io", "innoweb.ltd"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "ik.imagekit.io",
+        pathname: "**"
+      },
+      {
+        protocol: "https",
+        hostname: "innoweb.ltd",
+        pathname: "**"
+      }
+    ],
     deviceSizes: [320, 450, 640, 750, 828, 1080, 1200, 1920, 2048, 3840]
   },
   env: {
     NEXT_PUBLIC_HOSTNAME: process.env.NEXT_PUBLIC_HOSTNAME,
-    NEXT_PUBLIC_WEBKIT_URL: process.env.NEXT_PUBLIC_WEBKIT_URL,
-    NEXT_PUBLIC_GEOLOCATION_URL: process.env.NEXT_PUBLIC_GEOLOCATION_URL
+    NEXT_PUBLIC_WEBKIT_URL: process.env.NEXT_PUBLIC_WEBKIT_URL
+    // NEXT_PUBLIC_GEOLOCATION_URL: process.env.NEXT_PUBLIC_GEOLOCATION_URL
   },
   i18n: {
     locales: ["us"],
@@ -23,10 +34,10 @@ module.exports = nextTranslate({
     ]
   },
   poweredByHeader: false,
-  webpackDevMiddleware: config => {
-    config.watchOptions.poll = 300
-    return config
-  },
+  // webpackDevMiddleware: config => {
+  //   config.watchOptions.poll = 300
+  //   return config
+  // },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     // ALIAS GENERATOR
     config.resolve.alias["@actions"] = path.resolve(__dirname, "./src/store/actions")
