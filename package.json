@@ -4,7 +4,7 @@
   "description": "## Table of Contents",
   "main": "index.js",
   "engines": {
-    "node": "18.17.0"
+    "node": "18.17.1"
   },
   "scripts": {
     "commit": "sh scripts/commit.sh",
