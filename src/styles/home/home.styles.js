@@ -5,7 +5,7 @@ export const useStyles = createUseStyles({
     zIndex: 1
   },
   mainHero: {
-    backgroundImage: `url(${process.env.NEXT_PUBLIC_WEBKIT_URL}/hero-cover_NBU62a9GA6sQ.jpg)`,
+    backgroundImage: `url(/images/hero-cover.jpg)`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "bottom",
@@ -73,7 +73,7 @@ export const useStyles = createUseStyles({
   },
   mainSpeed: {
     color: "white",
-    backgroundImage: `url(${process.env.NEXT_PUBLIC_WEBKIT_URL}/mid-section_6vBLb5JkVZh.jpg)`,
+    backgroundImage: `url(/images/mid-section.jpg)`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",

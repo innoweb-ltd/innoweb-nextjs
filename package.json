@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "commit": "sh scripts/commit.sh",
-    "dev": "next",
+    "dev": "sh scripts/dev.sh",
     "build": "next build",
     "start": "next start -p $PORT"
   },
