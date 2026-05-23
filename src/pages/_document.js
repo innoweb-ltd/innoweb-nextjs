@@ -44,7 +44,7 @@ class JssDocument extends Document {
         <Head>
           <link rel="icon" href="/favicon.png" />
           <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet" />
-          <meta name="robots" content={process.env.NEXT_PUBLIC_HOSTNAME.split(".").includes("herokuapp") ? "noindex, nofollow" : "index, follow"} />
+          <meta name="robots" content={process.env.NEXT_PUBLIC_HOSTNAME === "www.innoweb.ltd" ? "index, follow" : "noindex, nofollow"} />
           <meta name="google-site-verification" content="5yEPj5mmZTCccU13Y_Fn_kKRh6DwEOy4EkKnpZhUE5E" />
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
           <script

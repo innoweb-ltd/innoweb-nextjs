@@ -1,6 +1,86 @@
 # Innoweb Repository
 
-Create .env.local file with the following records:
+## Local development
 
-- NEXT_PUBLIC_HOSTNAME=www.innoweb.ltd
-- NEXT_PUBLIC_WEBKIT_URL=https://ik.imagekit.io/innoweb
+```
+npm run dev
+```
+
+The dev script installs dependencies on first run.
+
+## Deployment
+
+Deploys are automated by `.github/workflows/deploy.yml`: every push to `master` (and manual `workflow_dispatch` runs) builds the `Dockerfile` via Cloud Build and rolls it out to Cloud Run service `innoweb-nextjs` in `europe-west1` of GCP project `innowebltd`.
+
+`NEXT_PUBLIC_HOSTNAME` controls the `<meta name="robots">` tag: only when it equals `www.innoweb.ltd` is the site marked indexable. Anywhere else (local dev, raw `*.run.app` URL) defaults to `noindex, nofollow`.
+
+### One-time GCP setup
+
+Run these once against the `innowebltd` project, as a user with `Owner` (or equivalent) on the project.
+
+```bash
+PROJECT_ID=innowebltd
+REPO=innoweb-ltd/innoweb-nextjs   # owner/repo on GitHub
+SA_NAME=github-deploy
+SA_EMAIL="${SA_NAME}@${PROJECT_ID}.iam.gserviceaccount.com"
+POOL=github
+PROVIDER=github
+
+gcloud config set project "$PROJECT_ID"
+
+# 1. Enable APIs
+gcloud services enable \
+  run.googleapis.com \
+  cloudbuild.googleapis.com \
+  artifactregistry.googleapis.com \
+  iamcredentials.googleapis.com
+
+# 2. Create the deploy service account
+gcloud iam service-accounts create "$SA_NAME" \
+  --display-name="GitHub Actions deploy"
+
+# 3. Grant it the roles needed for `gcloud run deploy --source .`
+for role in \
+  roles/run.admin \
+  roles/iam.serviceAccountUser \
+  roles/cloudbuild.builds.editor \
+  roles/artifactregistry.writer \
+  roles/storage.admin \
+  roles/logging.logWriter; do
+  gcloud projects add-iam-policy-binding "$PROJECT_ID" \
+    --member="serviceAccount:${SA_EMAIL}" --role="$role"
+done
+
+# 4. Create the Workload Identity pool + provider for GitHub
+gcloud iam workload-identity-pools create "$POOL" \
+  --location=global --display-name="GitHub Actions"
+
+gcloud iam workload-identity-pools providers create-oidc "$PROVIDER" \
+  --location=global --workload-identity-pool="$POOL" \
+  --display-name="GitHub" \
+  --issuer-uri="https://token.actions.githubusercontent.com" \
+  --attribute-mapping="google.subject=assertion.sub,attribute.repository=assertion.repository" \
+  --attribute-condition="assertion.repository=='${REPO}'"
+
+PROJECT_NUMBER=$(gcloud projects describe "$PROJECT_ID" --format='value(projectNumber)')
+
+# 5. Let the GitHub repo impersonate the service account
+gcloud iam service-accounts add-iam-policy-binding "$SA_EMAIL" \
+  --role=roles/iam.workloadIdentityUser \
+  --member="principalSet://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${POOL}/attribute.repository/${REPO}"
+
+# 6. Print the values to paste into GitHub secrets
+echo "GCP_SERVICE_ACCOUNT=${SA_EMAIL}"
+echo "GCP_WORKLOAD_IDENTITY_PROVIDER=projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${POOL}/providers/${PROVIDER}"
+```
+
+### Required GitHub secrets
+
+Add both at **Settings → Secrets and variables → Actions**:
+
+- `GCP_SERVICE_ACCOUNT` — service account email (printed by step 6 above).
+- `GCP_WORKLOAD_IDENTITY_PROVIDER` — full provider resource path (printed by step 6 above).
+
+### After first deploy
+
+Map `www.innoweb.ltd` to the Cloud Run service via **Cloud Run → Manage custom domains** (or `gcloud beta run domain-mappings create`). Update the DNS records as instructed.
