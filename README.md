@@ -10,7 +10,7 @@ The dev script installs dependencies on first run.
 
 ## Deployment
 
-Deploys are automated by `.github/workflows/deploy.yml`: every push to `main` (and manual `workflow_dispatch` runs) builds the `Dockerfile` via Cloud Build and rolls it out to Cloud Run service `innoweb-nextjs` in `europe-west1` of GCP project `innowebltd`.
+Deploys are automated by `.github/workflows/deploy.yml`: every push to `master` (and manual `workflow_dispatch` runs) builds the `Dockerfile` via Cloud Build and rolls it out to Cloud Run service `innoweb-nextjs` in `europe-west1` of GCP project `innowebltd`.
 
 `NEXT_PUBLIC_HOSTNAME` controls the `<meta name="robots">` tag: only when it equals `www.innoweb.ltd` is the site marked indexable. Anywhere else (local dev, raw `*.run.app` URL) defaults to `noindex, nofollow`.
 

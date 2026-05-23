@@ -31,4 +31,4 @@ No env vars are required for local dev. `NEXT_PUBLIC_HOSTNAME` is only consumed 
 
 Target is **Google Cloud Run**, project `innowebltd`, region `europe-west1`, service `innoweb-nextjs`. The `Dockerfile` does a multi-stage build (`deps → builder → runner`) on `node:20-alpine`, runs as a non-root `nextjs` user, listens on `$PORT` (8080), and runs the standalone `server.js`.
 
-Deploys are automated: `.github/workflows/deploy.yml` runs on every push to `main` and on manual `workflow_dispatch`. It authenticates via Workload Identity Federation (no JSON keys) using GitHub secrets `GCP_SERVICE_ACCOUNT` and `GCP_WORKLOAD_IDENTITY_PROVIDER`, then runs `gcloud run deploy --source .`. The one-time GCP-side setup commands are in `README.md`.
+Deploys are automated: `.github/workflows/deploy.yml` runs on every push to `master` and on manual `workflow_dispatch`. It authenticates via Workload Identity Federation (no JSON keys) using GitHub secrets `GCP_SERVICE_ACCOUNT` and `GCP_WORKLOAD_IDENTITY_PROVIDER`, then runs `gcloud run deploy --source .`. The one-time GCP-side setup commands are in `README.md`.
