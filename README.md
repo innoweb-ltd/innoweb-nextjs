@@ -51,7 +51,14 @@ for role in \
     --member="serviceAccount:${SA_EMAIL}" --role="$role"
 done
 
-# 4. Create the Workload Identity pool + provider for GitHub
+# 4. Pre-create the Artifact Registry repo Cloud Run will push images to
+#    (the deploy SA only has writer rights, not create rights — by design)
+gcloud artifacts repositories create cloud-run-source-deploy \
+  --repository-format=docker \
+  --location=europe-west1 \
+  --description="Cloud Run source deploys"
+
+# 5. Create the Workload Identity pool + provider for GitHub
 gcloud iam workload-identity-pools create "$POOL" \
   --location=global --display-name="GitHub Actions"
 
@@ -64,12 +71,12 @@ gcloud iam workload-identity-pools providers create-oidc "$PROVIDER" \
 
 PROJECT_NUMBER=$(gcloud projects describe "$PROJECT_ID" --format='value(projectNumber)')
 
-# 5. Let the GitHub repo impersonate the service account
+# 6. Let the GitHub repo impersonate the service account
 gcloud iam service-accounts add-iam-policy-binding "$SA_EMAIL" \
   --role=roles/iam.workloadIdentityUser \
   --member="principalSet://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${POOL}/attribute.repository/${REPO}"
 
-# 6. Print the values to paste into GitHub secrets
+# 7. Print the values to paste into GitHub secrets
 echo "GCP_SERVICE_ACCOUNT=${SA_EMAIL}"
 echo "GCP_WORKLOAD_IDENTITY_PROVIDER=projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${POOL}/providers/${PROVIDER}"
 ```
@@ -78,8 +85,8 @@ echo "GCP_WORKLOAD_IDENTITY_PROVIDER=projects/${PROJECT_NUMBER}/locations/global
 
 Add both at **Settings → Secrets and variables → Actions**:
 
-- `GCP_SERVICE_ACCOUNT` — service account email (printed by step 6 above).
-- `GCP_WORKLOAD_IDENTITY_PROVIDER` — full provider resource path (printed by step 6 above).
+- `GCP_SERVICE_ACCOUNT` — service account email (printed by step 7 above).
+- `GCP_WORKLOAD_IDENTITY_PROVIDER` — full provider resource path (printed by step 7 above).
 
 ### After first deploy
 
