@@ -88,6 +88,34 @@ Add both at **Settings → Secrets and variables → Actions**:
 - `GCP_SERVICE_ACCOUNT` — service account email (printed by step 7 above).
 - `GCP_WORKLOAD_IDENTITY_PROVIDER` — full provider resource path (printed by step 7 above).
 
-### After first deploy
+### Domain mapping
 
-Map `www.innoweb.ltd` to the Cloud Run service via **Cloud Run → Manage custom domains** (or `gcloud beta run domain-mappings create`). Update the DNS records as instructed.
+Both `www.innoweb.ltd` and `innoweb.ltd` are mapped to the Cloud Run service. DNS is hosted at Namecheap.
+
+```bash
+gcloud beta run domain-mappings create \
+  --service=innoweb-nextjs \
+  --domain=www.innoweb.ltd \
+  --region=europe-west1 \
+  --project=innowebltd
+
+gcloud beta run domain-mappings create \
+  --service=innoweb-nextjs \
+  --domain=innoweb.ltd \
+  --region=europe-west1 \
+  --project=innowebltd
+```
+
+Each command prints the DNS records to add at Namecheap (Advanced DNS):
+
+- `www` → `CNAME` → `ghs.googlehosted.com.`
+- `@` → `A` / `AAAA` records (four of each, Google anycast IPs)
+
+The apex (`innoweb.ltd`) is served by Cloud Run too — the Next.js `redirects()` block in `next.config.js` 308s any request with `Host: innoweb.ltd` to `https://www.innoweb.ltd/:path*`. This is done in-app (not via Namecheap URL Redirect) because Namecheap's redirect only serves HTTP and breaks HTTPS-first browsers.
+
+Cert provisioning takes 15–60 min after DNS resolves. Check with:
+
+```bash
+gcloud beta run domain-mappings describe \
+  --domain=www.innoweb.ltd --region=europe-west1 --project=innowebltd
+```
