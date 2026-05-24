@@ -21,6 +21,16 @@ module.exports = nextTranslate({
     ]
   },
   poweredByHeader: false,
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "innoweb.ltd" }],
+        destination: "https://www.innoweb.ltd/:path*",
+        permanent: true
+      }
+    ]
+  },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     // ALIAS GENERATOR
     config.resolve.alias["@actions"] = path.resolve(__dirname, "./src/store/actions")
